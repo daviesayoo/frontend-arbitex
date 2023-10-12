@@ -1,7 +1,7 @@
 import {
-  GET_DEPOSIT_TRANSATION_REQUEST,
-  GET_DEPOSIT_TRANSATION_SUCCESS,
-  GET_DEPOSIT_TRANSATION_FAIL,
+  GET_DEPOSIT_TRANSACTION_REQUEST,
+  GET_DEPOSIT_TRANSACTION_SUCCESS,
+  GET_DEPOSIT_TRANSACTION_FAIL,
 
   CREATE_DEPOSIT_FUNDS_REQUEST,
   CREATE_DEPOSIT_FUNDS_SUCCESS,
@@ -48,17 +48,17 @@ export const getDepositTransactions = ({
   order = 'DESC',
 }) => async (dispatch) => {
   dispatch({
-    type: GET_DEPOSIT_TRANSATION_REQUEST,
+    type: GET_DEPOSIT_TRANSACTION_REQUEST,
   });
   try {
     const res = await apiServer.get(`deposits/${userId}?page=${page}&pageSize=${pageSize}&order=${order}`);
     dispatch({
-      type: GET_DEPOSIT_TRANSATION_SUCCESS,
+      type: GET_DEPOSIT_TRANSACTION_SUCCESS,
       payload: res.data
     });
   } catch (err) {
     dispatch({
-      type: GET_DEPOSIT_TRANSATION_FAIL
+      type: GET_DEPOSIT_TRANSACTION_FAIL
     });
   }
 };
