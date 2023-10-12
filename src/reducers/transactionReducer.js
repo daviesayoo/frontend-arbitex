@@ -1,7 +1,7 @@
 import {
-  GET_DEPOSIT_TRANSATION_REQUEST,
-  GET_DEPOSIT_TRANSATION_SUCCESS,
-  GET_DEPOSIT_TRANSATION_FAIL,
+  GET_DEPOSIT_TRANSACTION_REQUEST,
+  GET_DEPOSIT_TRANSACTION_SUCCESS,
+  GET_DEPOSIT_TRANSACTION_FAIL,
 
   CREATE_DEPOSIT_FUNDS_REQUEST,
   CREATE_DEPOSIT_FUNDS_SUCCESS,
@@ -98,18 +98,18 @@ const initialState = {
 
 function transactionReducer(state = initialState, action) {
   switch (action.type) {
-      case GET_DEPOSIT_TRANSATION_REQUEST:
+      case GET_DEPOSIT_TRANSACTION_REQUEST:
         return {
           ...state,
           loading: true,
         }
-      case GET_DEPOSIT_TRANSATION_SUCCESS:
+      case GET_DEPOSIT_TRANSACTION_SUCCESS:
         return {
           ...state,
           depositTransactions: action.payload.data,
           loading: false,
         }
-      case GET_DEPOSIT_TRANSATION_FAIL:
+      case GET_DEPOSIT_TRANSACTION_FAIL:
         return {
           ...state,
           error: action.payload,
