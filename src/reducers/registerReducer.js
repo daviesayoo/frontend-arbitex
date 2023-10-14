@@ -31,6 +31,6 @@ function registerReducer(state = initialState, action) {
       default:
           return state;
   }
-}
+};
 
 export default registerReducer;

@@ -75,6 +75,6 @@ function loginReducer(state = initialState, action) {
       default:
           return state;
   }
-}
+};
 
 export default loginReducer;

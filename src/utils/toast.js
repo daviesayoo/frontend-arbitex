@@ -19,4 +19,4 @@ export const displayMsg = (msg, status = 'success') => {
       toast.error(msg, style);
       break;
   }
-}
+};

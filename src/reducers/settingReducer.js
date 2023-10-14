@@ -55,6 +55,6 @@ function settingReducer(state = initialState, action) {
       default:
           return state;
   }
-}
+};
 
 export default settingReducer;

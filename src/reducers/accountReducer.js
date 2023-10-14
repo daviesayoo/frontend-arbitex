@@ -67,6 +67,6 @@ function accountReducer(state = initialState, action) {
     default:
       return state;
   }
-}
+};
 
 export default accountReducer;

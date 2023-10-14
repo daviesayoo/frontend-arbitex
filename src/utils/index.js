@@ -28,4 +28,4 @@ export const getDays = (date1, date2) => {
   let difference = date_1.getTime() - date_2.getTime();
   let totalDays = Math. ceil(difference / (1000 * 3600 * 24));
   return totalDays;
-}
+};
